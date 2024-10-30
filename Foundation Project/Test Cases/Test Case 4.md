@@ -25,8 +25,7 @@
 **Test Data:**
 | Planet Name | Expected Result |
 |---|---|
-| Earth | Planet deletion fails due to duplicate name |
-| Mars | Planet deleted successfully |
+| Earth | Planet deleted successfully |
 | Planet#Earth! | Planet deletion fails due to invalid planet name |
 | (0 characters) | Planet deletion fails due to missing name |
 

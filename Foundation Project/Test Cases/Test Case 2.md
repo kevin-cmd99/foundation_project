@@ -29,10 +29,9 @@
 | Planet Name | Expected Result |
 |---|---|
 | Earth | Planet addition fails due to duplicate name |
-| Mars | Planet successfully added |
+| Fars | Planet successfully added |
+| Fars! | Planet successfully added |
 | A very long planet name that exceeds 30 characters | Planet addition fails due to invalid name length |
-| Planet#Earth! | Planet successfully added |
-| ExistingPlanetName | Planet addition fails due to duplicate name |
 | (0 characters) | Planet addition fails due to missing name |
 
 **Acceptance Criteria:**
@@ -59,10 +58,9 @@
 | Planet Name | Name Length | Contains Special Characters | Expected Result |
 |---|---|---|---|
 | Earth | 5 | No | Planet addition fails due to duplicate name |
-| Mars | 4 | No | Planet successfully added |
+| Fars | 4 | No | Planet successfully added |
+| Fars! | 5 | Yes | Planet successfully added |
 | A very long planet name that exceeds 30 characters | 31+ | No | Planet addition fails due to invalid name length |
-| Planet#Earth! | 12 | Yes | Planet successfully added |
-| Planet@ | 6 | Yes | Planet successfully added |
 | (0 characters) | 0 | No | Planet addition fails due to missing name |
 
 ### Parameterized Test Scenario for Planet Addition
@@ -70,6 +68,7 @@
 | Step | Actor | Data | Result |
 |---|---|---|---|
 | Given the user is on the planet addition page | Existing User | URL of planet addition page | |
+| When the user selects planet | Existing User | | |
 | When the user enters a planet name {planetName} | Existing User | {planetName} | |
 | And the user clicks the "Submit" button | Existing User | | Planet is added successfully or an error message is displayed |
 | Then the {expectedResult} | Existing User | | {expectedResult} |
@@ -82,5 +81,4 @@
 | TC02 | Mars | Planet successfully added |
 | TC03 | A very long planet name that exceeds 30 characters | Planet addition fails due to invalid name length |
 | TC04 | Planet#Earth! | Planet successfully added |
-| TC05 | Planet@ | Planet successfully added |
 | TC06 | (0 characters) | Planet addition fails due to missing name |

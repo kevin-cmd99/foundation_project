@@ -34,7 +34,6 @@
 | Phobos | 2 (Mars) | Moon successfully added |
 | A very long moon name that exceeds 30 characters | 1 (Earth) | Moon addition fails due to invalid name length |
 | Moon#123! | 1 (Earth) | Moon successfully added |
-| ExistingMoonName | 1 (Earth) | Moon addition fails due to duplicate name |
 | (0 characters) | 1 (Earth) | Moon addition fails due to missing name |
 
 **Acceptance Criteria:**
@@ -65,7 +64,6 @@
 | Phobos | 5 | No | Moon successfully added |
 | A very long moon name that exceeds 30 characters | 31+ | No | Moon addition fails due to invalid name length |
 | Moon#123! | 9 | Yes | Moon successfully added |
-| Moon@ | 4 | Yes | Moon successfully added |
 | (0 characters) | 0 | No | Moon addition fails due to missing name |
 
 ### Parameterized Test Scenario for Moon Addition
@@ -86,5 +84,4 @@
 | TC02 | Phobos | 2 | Moon successfully added |
 | TC03 | A very long moon name that exceeds 30 characters | 1 | Moon addition fails due to invalid name length |
 | TC04 | Moon#123! | 1 | Moon successfully added |
-| TC05 | Moon@ | 1 | Moon successfully added |
 | TC06 | (0 characters) | 1 | Moon addition fails due to missing name |
